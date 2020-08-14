@@ -24,8 +24,17 @@ class MyMuseumApp extends StatelessWidget {
                                 appBar: AppBar(title: Text('MyMuseumApp', 
                                                 style: TextStyle(fontSize: 30)), 
                                                 backgroundColor: Colors.green[300]
-                                ),
-                       backgroundColor: Colors.green[100]));
+                                              ),
+                       backgroundColor: Colors.green[100],
+                       body: Center(child: Text("Write something here",
+                                                style: TextStyle(
+                                                                  color: Colors.black,
+                                                                  fontSize: 30.0,
+                                                                )
+                                               )
+                                   )
+                                     )
+                       );
   }
 
 }
