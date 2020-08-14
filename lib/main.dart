@@ -30,13 +30,15 @@ class MyMuseumApp extends StatelessWidget {
                                 Column(
                                         children:<Widget>[
                        
-                                                            Text("Write something here",
-                                                                  style: TextStyle(
-                                                                  color: Colors.black,
-                                                                  fontSize: 30.0,
-                                                                                  )
-                                                                ),
-                                                            Text("Write something here"),
+                                                            SizedBox(
+                                                                      child: Text("put graphic here"), 
+                                                                      width: double.infinity, 
+                                                                      height: 200,
+                                                                      //backgroundColor: Colors.amber,
+                                                                      //shape: BoxShape.circle
+                                                                    ),
+                                                                    
+                                                            Container(child: Text("Write something here"), color: Colors.blue, margin: EdgeInsets.all(10.0), padding: EdgeInsets.all(20.0)),
 
                                                             Text("Write something here",
                                                                   style: TextStyle(
