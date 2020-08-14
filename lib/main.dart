@@ -31,7 +31,7 @@ class MyMuseumApp extends StatelessWidget {
                                         children:<Widget>[
                        
                                                             SizedBox(
-                                                                      child: Text("put graphic here"), 
+                                                                      child: Text("Put some kinda graphic thing right here....."), 
                                                                       width: double.infinity, 
                                                                       height: 200,
                                                                       //backgroundColor: Colors.amber,
