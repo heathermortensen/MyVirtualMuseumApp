@@ -26,12 +26,27 @@ class MyMuseumApp extends StatelessWidget {
                                                 backgroundColor: Colors.green[300]
                                               ),
                        backgroundColor: Colors.green[100],
-                       body: Center(child: Text("Write something here",
-                                                style: TextStyle(
+                       body: 
+                                Column(
+                                        children:<Widget>[
+                       
+                                                            Text("Write something here",
+                                                                  style: TextStyle(
                                                                   color: Colors.black,
                                                                   fontSize: 30.0,
-                                                                )
-                                               )
+                                                                                  )
+                                                                ),
+                                                            Text("Write something here"),
+
+                                                            Text("Write something here",
+                                                                  style: TextStyle(
+                                                                  color: Colors.black,
+                                                                  fontSize: 30.0,
+                                                                                  )
+                                                                ),
+
+                                          ], // children <Widgets>
+                                        //) 
                                     ),
                        bottomNavigationBar: BottomNavigationBar(
                                                                 currentIndex: 0,
