@@ -32,10 +32,36 @@ class MyMuseumApp extends StatelessWidget {
                                                                   fontSize: 30.0,
                                                                 )
                                                )
-                                   )
-                                     )
-                       );
-  }
+                                    ),
+                       bottomNavigationBar: BottomNavigationBar(
+                                                                currentIndex: 0,
+                                                                fixedColor: Colors.green,
+                                                                //Note: u must have 2 items here
+                                                                items: [
+                                                                   BottomNavigationBarItem(
+                                                                                          title: Text("Exhibits"),
+                                                                                          icon: Icon(Icons.collections)
+                                                                                          ),
+                                                                  BottomNavigationBarItem(
+                                                                                          title: Text("Add Exhibit"),
+                                                                                          icon: Icon(Icons.add_box)
+                                                                                          ),
+                                                                        ]
+                                                                ,onTap: (int index){
+                                                                  setState((){
+                                                                       // _currentIndex=index;                                                            _currentIndex = index;
+                                                                              });
+                                                                                   },
+                                                    
+                                      ),
+                                                                  
+                                                                                                                                            
+                                                                                                      
+                       ));
+                                                                                        
+                                                                    }
+                                                                  
+                                                                    void setState(Null Function() param0) {}
 
 }
 
