@@ -28,15 +28,22 @@ class MyMuseumApp extends StatelessWidget {
                        backgroundColor: Colors.green[100],
                        body: 
                                 Column(
+                                        //An array/List of generic type's <Widget>
                                         children:<Widget>[
+                                                            Card(
+
+                                                                //child: Image.asset('assets/images/museumInterior.png', width: 20.0),
+                                                                child: new Image.asset("images/museumInterior.png"),
+
+                                                                ),
                        
-                                                            SizedBox(
-                                                                      child: Text("Put some kinda graphic thing right here....."), 
-                                                                      width: double.infinity, 
-                                                                      height: 200,
-                                                                      //backgroundColor: Colors.amber,
-                                                                      //shape: BoxShape.circle
-                                                                    ),
+                                                            // SizedBox(
+                                                            //           child: Text("Put some kinda graphic thing right here....."), 
+                                                            //           width: double.infinity, 
+                                                            //           height: 200,
+                                                            //           //backgroundColor: Colors.amber,
+                                                            //           //shape: BoxShape.circle
+                                                            //         ),
                                                                     
                                                             Container(child: Text("Write something here"), color: Colors.blue, margin: EdgeInsets.all(10.0), padding: EdgeInsets.all(20.0)),
 
