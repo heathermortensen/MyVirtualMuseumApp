@@ -9,7 +9,7 @@ Artworks in gallery exhibits always have an informational plauque hanging next t
 
 These screenshots show how a user might take photos of and store details about artwork in the gallery exhibit.
 
-![MyVirtualExhibitApp](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/AppSideBySide.png) 
+![MyVirtualExhibitAppFirstScreenSketch](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/AppSideBySide.png) 
 
 
 I use MyVirtualMusesumApp to hold a Stateful Widget called an Painting. A painting represents a piece of Art. Many Paintings stored in a List are called an Exhibit (or, perhaps a PaintingManager?).
@@ -18,6 +18,7 @@ MyVirtualMuseumApp holds a List of Exbits. It is the ExhibitManager.
 MyVirtualExhibitApp
 ------------------------
 ![MyVirtualExhibitApp](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/WidgetTreeApp.png)
+![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/ScreenShotSketchForMyApp.png)
 
 Exhibit
 ------------------------
