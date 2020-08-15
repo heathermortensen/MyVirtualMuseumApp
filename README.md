@@ -18,7 +18,7 @@ MyVirtualMuseumApp holds a List of Exbits. It is the ExhibitManager.
 MyVirtualExhibitApp
 ------------------------
 ![MyVirtualExhibitApp](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/WidgetTreeApp.png)
-![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/ScreenShotSketchForMyApp.png)
+
 
 Exhibit
 ------------------------
@@ -38,4 +38,6 @@ But, Let’s look at the current exhibit.
 
 In Flutter, it makes sense to keep the state above the widgets that use it. Source: Stateful Widgets: https://flutter.dev/docs/development/data-and-backend/state-mgmt/simple
 
+## Implementation
 
+![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/ScreenShotSketchForMyApp.png)
