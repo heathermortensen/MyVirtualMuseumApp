@@ -14,10 +14,6 @@ class MyMuseumApp extends StatelessWidget {
 
     // Build whatever here - camera widget, homepage, something
  
-      
-     
-    
-    
     //MaterialApp allows us to add a navigator. It wraps our entire project.
     //Scaffold has a white background and allows us to add an appBar
     return MaterialApp(home: Scaffold(
@@ -49,18 +45,47 @@ class MyMuseumApp extends StatelessWidget {
                                                             //           //shape: BoxShape.circle
                                                             //         ),
                                                                     
-                                                            Container(child: Text("Visit The Museum of Russian Art (Link Here)", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold ,color: Colors.yellow[200])), color: Colors.grey[900], width: double.infinity, /*margin: EdgeInsets.all(10.0),*/ padding: EdgeInsets.all(20.0)),
+                                                            Container(
+                                                                      color: Colors.grey[900], 
+                                                                      width: double.infinity, /*margin: EdgeInsets.all(10.0),*/ 
+                                                                      height: 200.0,
+                                                                      padding: EdgeInsets.all(5.0),
+                                                                      child: 
+                                                                             Row(
+                                                                                    children: [
+                                                                                                Text("  Link to TMORA website here    ", 
+                                                                                                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold ,color: Colors.yellow[200])
+                                                                                                  ), 
+                                                                                    
+                                                                                      //Raised button with TMORA icon. It has an anonymous function onPressed(arguments){function body}
+                                                                                                Container(
+                                                                                                          width: 150.0,
+                                                                                                          height: 150.0,
+                                                                                                          child: RaisedButton(onPressed: (){
+                                                                                                          print('Button was clicked. to visit website or gallery exhibit or something.');}, 
+                                                                                                          child: Image.asset("images/TMORA.png"),
+                                                                                                          color: Colors.black,
+                                                                                                                )
+                                                                                                            ), //Container
+                                                                                                                          
+                                                                                    ], //children of Row
+                                                                                  ),
+                                                                      ),
 
-                                                            Text("Write something here",
+                                                            Text("Make something here...maybe user id/authentication",
                                                                   style: TextStyle(
                                                                   color: Colors.black,
                                                                   fontSize: 30.0,
                                                                                   )
                                                                 ),
 
+
+  
+                                          
                                           ], // children <Widgets>
                                         //) 
                                     ),
+                                
                        bottomNavigationBar: BottomNavigationBar(
                                                                 currentIndex: 0,
                                                                 fixedColor: Colors.green,
