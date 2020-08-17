@@ -1,8 +1,9 @@
 //contains the stateless and stateful widget
 import 'package:flutter/material.dart';
+import 'package:second_app_Heather/Exhibits.dart';
+import 'package:second_app_Heather/bottom_nav_widget.dart';
 //import 'package:flutter/semantics.dart';
 //import 'MyMuseumApp_widget.dart'; - > error: need to add this to the yaml
-import 'Exhibits.dart';
 
 ////////////////
 main() {
@@ -29,7 +30,13 @@ class _MyMuseumAppState extends State<MyMuseumApp> {
 //INSTANCE PROPERTIES
 //--------------------
 
-  int _currentIndex = 0; //Tracks bottomNavigationBar selection
+  RootTab _currentTab = RootTab.home; //Tracks bottomNavigationBar selection
+
+  void _didSelectTab(RootTab rootTab) {
+    setState(() {
+      _currentTab = rootTab;
+    });
+  }
 
 //List of exhibits that are stored in the app. Should be initialized to only hold 1 exhibit from TMORA.
 //List <Exhibits> galleryExhibits[];
@@ -47,6 +54,10 @@ class _MyMuseumAppState extends State<MyMuseumApp> {
 
   @override
   Widget build(BuildContext context) {
+    //var body =
+    // HomeWIdget
+    // Exhibits
+    // AddExhibits
     // Build whatever here - camera widget, homepage, something
 
     //MaterialApp allows us to add a navigator. It wraps our entire project.
@@ -106,13 +117,13 @@ class _MyMuseumAppState extends State<MyMuseumApp> {
                         //setState();
                         /////////////////2 of 2 line errors///////////////////////////////////////////////////////////////
                         //This setStae() doesn't execute. This should actually go through the setState function and set state = index = 1
-                        setState(() {
-                          _currentIndex =
-                              1; //go to empty list of exhibits that only holds one default exhibit
-                          print(
-                              'set state after button pressed. Current index is $_currentIndex');
-                          print(' MyMuseumAppState() = $_MyMuseumAppState() ');
-                        });
+                        // setState(() {
+                        //   _currentIndex =
+                        //       1; //go to empty list of exhibits that only holds one default exhibit
+                        //   print(
+                        //       'set state after button pressed. Current index is $_currentIndex');
+                        //   print(' MyMuseumAppState() = $_MyMuseumAppState() ');
+                        // });
 
                         //This button currently does nothing....
                         //Basically just navigates to the Body of Soviet Art Exhibit within the Exhibit List.
@@ -135,154 +146,17 @@ class _MyMuseumAppState extends State<MyMuseumApp> {
                 color: Colors.black,
                 fontSize: 20.0,
               )),
-
-          //add Bottom navigational control bar
-          MyBottomNavigationBar(),
         ], // children <Widgets>
         //)
       ), //column was here
 
-      //_galleryExhibits[_currentIndex], //goes into body of scaffold for nav control
-      //Navigathion bar at bottom of screen
-
-      //body: _children[_currentIndex],
-
-      // bottomNavigationBar: BottomNavigationBar(
-      //   currentIndex: _currentIndex, //Good
-      //   fixedColor: Colors.green,
-      //   iconSize: 30,
-
-      //   //onTap: onTap(),
-      //   //currentIndex: _currentIndex,
-
-      // //Note: u must have 2 items here
-      // items: [
-      //   BottomNavigationBarItem(
-      //     title: Text("Login"),
-      //     icon: Icon(Icons.home),
-      //     backgroundColor: Colors.yellow,
-      //   ),
-      //   BottomNavigationBarItem(
-      //     title: Text("Exhibits"),
-      //     icon: Icon(Icons.collections),
-      //     backgroundColor: Colors.black,
-      //   ),
-      //   BottomNavigationBarItem(
-      //     title: Text("Add Exhibit"),
-      //     icon: Icon(Icons.add_box),
-      //     backgroundColor: Colors.green,
-      //   ),
-      // ], //end of Items list
-
-      /*   onTap: (index) {
-          //executes when user taps bottomNavigationBar
-          //This method triggers the build() method to re-runwith the state passed into it. Changes the body of our scaffold widget & animates the navigation bar to the correct tab.
-          //This is a method of the BottomNavigationBar.
-          print('BottomNavigationBar Item was tapped. index =$index');
-
-          setState(() {
-            _currentIndex = index;
-            print(
-                'setState() for the BottomNavigationBar was called. index =$index');
-            if (index == 1) {
-              // ignore: unnecessary_statements
-              _galleryExhibits[0];
-            }
-          });
-        }, */ //end onTap(index),
+      //add Bottom navigational control bar
+      bottomNavigationBar: MyBottomNavigationBar(
+        currentTab: _currentTab,
+        onTabSelected: _didSelectTab,
+      ),
     ));
-
-    //rremoved list line that was causing the error from here........
-
-    // )
-    //));
   } //end of build method
-
-/*  onTap(int index) {
-//executes when user taps bottomNavigationBar
-//This method triggers the build() method to re-runwith the state passed into it. Changes the body of our scaffold widget & animates the navigation bar to the correct tab.
-//This is a method of the BottomNavigationBar.
-    print('BottomNavigationBar Item was tapped. index =$index');
-
-    setState(() {
-      _currentIndex = index;
-
-      print('setState() for the BottomNavigationBar was called. index =$index');
-    }); //end setState
-  } //end onTap(index)
-*/
-//void setState(Null Function() param0) {}
 
 } // end of class _MyMuseumAppState extends State
 ///////////////////////////////////////////////////
-
-//void setState(Null Function() param0) {}
-class MyBottomNavigationBar extends StatefulWidget {
-  _MyBottomNavigationBarState createState() => _MyBottomNavigationBarState();
-}
-
-class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
-  //JUST REMOVED THIS!!!!
-  int _currentIndex = 0;
-  //_currentIndex = _MyMuseumAppState();
-
-  final List<Widget> _children = [
-    //New pages generated by bottom nav bar go here
-    Exhibits()
-  ];
-
-  //get _currentIndex => _currentNavBarIndex;
-
-  onTappingOfBar(int index) {
-//executes when user taps bottomNavigationBar
-//This method triggers the build() method to re-runwith the state passed into it. Changes the body of our scaffold widget & animates the navigation bar to the correct tab.
-//This is a method of the BottomNavigationBar.
-    print('BottomNavigationBar Item was tapped. index =$index');
-
-    setState(() {
-      //_MyMuseumAppState.createState();
-      //MyMuseumAppState._currentIndex = index;
-      _currentIndex = index;
-
-      print('setState() for the BottomNavigationBar was called. index =$index');
-    }); //end setState
-  } //end onTappingOfBar()
-
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      body: _children[_currentIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        fixedColor: Colors.green,
-        iconSize: 30,
-
-        onTap: onTappingOfBar(_currentIndex),
-        //currentIndex: _currentNavBarIndex,
-        ////////////////
-        ///Question: Should this pull from the navBar State or the MyMuseumApp state??
-        ///Right now, its pulling from MyMuseumApp, which is prob why it isnt working.
-        //currentIndex: _currentIndex, //Good when this was inside the MyMuseumApp class
-        currentIndex: _currentIndex,
-
-        //Note: u must have 2 items here
-        items: [
-          BottomNavigationBarItem(
-            title: Text("Login"),
-            icon: Icon(Icons.home),
-            backgroundColor: Colors.yellow,
-          ),
-          BottomNavigationBarItem(
-            title: Text("Exhibits"),
-            icon: Icon(Icons.collections),
-            backgroundColor: Colors.black,
-          ),
-          BottomNavigationBarItem(
-            title: Text("Add Exhibit"),
-            icon: Icon(Icons.add_box),
-            backgroundColor: Colors.green,
-          ),
-        ], //end of Items list
-      ),
-    );
-  }
-}
