@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Exhibits extends StatelessWidget {
-  final Color color;
+  //final Color color;
 
-  Exhibits(this.color);
+  //Exhibits(this.color);
 
   @override
   build(BuildContext context) {
