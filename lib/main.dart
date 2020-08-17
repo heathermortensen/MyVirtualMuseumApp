@@ -1,32 +1,45 @@
 //contains the stateless and stateful widget
 import 'package:flutter/material.dart';
-//import 'MyMuseumApp_widget.dart';
+//import 'MyMuseumApp_widget.dart'; - > error: need to add this to the yaml
+import 'Exhibits.dart';
 
+////////////////
 main()
 {
   //Start rendering the user interface here by rendering a widget
   runApp(MyMuseumApp());
 
 }
+///////////////////////////////////////////
 class MyMuseumApp extends StatefulWidget {
 
     @override
-  State<StatefulWidget> createState() {
+  _MyMuseumAppState createState() {
 
     print('state created inside the createState() method.');
-
+    
     return _MyMuseumAppState();
   }
   
 }
-
+///////////////////////////////////////////////////
 class _MyMuseumAppState extends State<MyMuseumApp>{
 
+//INSTANCE PROPERTIES
+//--------------------
+
+
+int _currentIndex = 0;   //Tracks bottomNavigationBar selection
+
 //List of exhibits that are stored in the app. Should be initialized to only hold 1 exhibit from TMORA.
-
 //List <Exhibits> galleryExhibits[];
-List <String> galleryExhibits = ['an exhibit object inside the galleryExhibits List'];
-
+//final List<Widget> _children = [];
+//_galleryExhibits[_currentIndex], //goes into body of scaffold
+//final List<Widget> _galleryExhibits = [];  ///////////////////////1 of 2 line errors////////////////////////////////////////
+final List<Exhibits> _galleryExhibits = [
+                                            //This is my placeholder for the Body of Soviet Art exhibit that appears by default.
+                                            Exhibits(Colors.deepOrange),
+                                      ];
 
   @override
   Widget build(BuildContext context) {
@@ -45,8 +58,11 @@ List <String> galleryExhibits = ['an exhibit object inside the galleryExhibits L
                                                   ),
                            //backgroundColor: Colors.green[100],
                            //backgroundColor: Colors.brown[100],
+                           
                            backgroundColor: Colors.grey[500],
                            body: 
+                                                       
+
                                     Column(
                                             //An array/List of generic type's <Widget>
                                             children:<Widget>[
@@ -73,7 +89,7 @@ List <String> galleryExhibits = ['an exhibit object inside the galleryExhibits L
                                                                           child: 
                                                                                  Row(
                                                                                         children: [
-                                                                                                    Text("  Link to TMORA website here    ", 
+                                                                                                    Text("  Link to TMORA website", 
                                                                                                       style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold ,color: Colors.yellow[200])
                                                                                                       ), 
                                                                                         
@@ -81,10 +97,27 @@ List <String> galleryExhibits = ['an exhibit object inside the galleryExhibits L
                                                                                                     Container(
                                                                                                               width: 150.0,
                                                                                                               height: 150.0,
+                                                                                                              margin: EdgeInsets.all(10.0),
+                                                                                                            
+
                                                                                                               child: RaisedButton(onPressed: (){
-                                                                                                              print('Button was clicked. to visit website or gallery exhibit or something.');}, 
-                                                                                                              child: Image.asset("images/TMORA.png"),
-                                                                                                              color: Colors.black,
+                                                                                                              print('Button was clicked. to visit website or gallery exhibit or something.');
+
+                                                                                                               /////////////////2 of 2 line errors///////////////////////////////////////////////////////////////                           
+                                                                                                              // ignore: unnecessary_statements
+                                                                                                              _galleryExhibits[0]; //goes into body of scaffold for nav control
+                                                                                                                                         
+                                                                                                              //This button currently does nothing....
+                                                                                                              //Basically just navigates to the Body of Soviet Art Exhibit within the Exhibit List.
+                                                                                                              //GO TO 1st exhibit inside the list.
+                                                                                                              
+                                                                                                              }, //end onPressed() method
+                                                                                                              //What is the onPressed button methd supposed to do?
+                                                                                                              //It should take the user to the defaul art exibit that is initiazlied inside the 
+                                                                                                              //List of exbihits - Body of Soviet Art, maybe.
+
+                                                                                                                                  child: Image.asset("images/TMORA.png"),
+                                                                                                                                  color: Colors.black,  //This makes a frame around the exhibit button that looks like a picture frame. I like.
                                                                                                                     )
                                                                                                                 ), //Container
                                                                                                                               
@@ -95,7 +128,7 @@ List <String> galleryExhibits = ['an exhibit object inside the galleryExhibits L
                                                                 Text("Make something here...maybe user id/authentication",
                                                                       style: TextStyle(
                                                                       color: Colors.black,
-                                                                      fontSize: 30.0,
+                                                                      fontSize: 20.0,
                                                                                       )
                                                                     ),
     
@@ -104,42 +137,75 @@ List <String> galleryExhibits = ['an exhibit object inside the galleryExhibits L
                                               
                                               ], // children <Widgets>
                                             //) 
-                                        ),
+                                        ), //column was here
                             
+                            
+                            //_galleryExhibits[_currentIndex], //goes into body of scaffold for nav control
                             //Navigathion bar at bottom of screen        
                            bottomNavigationBar: BottomNavigationBar(
-                                                                    currentIndex: 0,
+                                                                    
+                                                                    currentIndex: _currentIndex,  //Good
                                                                     fixedColor: Colors.green,
+                                                                    iconSize: 30,
                                                           //Note: u must have 2 items here
                                                           items: [
                                                                        
                                                                        
                                                                    BottomNavigationBarItem(
                                                                                               title: Text("Login"),
-                                                                                              icon: Icon(Icons.home)
+                                                                                              icon: Icon(Icons.home),
+                                                                                              backgroundColor: Colors.yellow,
                                                                                           ),
                                                                    BottomNavigationBarItem(
                                                                                           title: Text("Exhibits"),
-                                                                                          icon: Icon(Icons.collections)
+                                                                                          icon: Icon(Icons.collections),
+                                                                                          backgroundColor: Colors.black,
                                                                                           ),
                                                                   BottomNavigationBarItem(
                                                                                           title: Text("Add Exhibit"),
-                                                                                          icon: Icon(Icons.add_box)
+                                                                                          icon: Icon(Icons.add_box),
+                                                                                          backgroundColor: Colors.green,
                                                                                           ),
-                                                                ]
-                                                                ,onTap: (int index){
-                                                                  setState((){
-                                                                       // _currentIndex=index;                                                            _currentIndex = index;
-                                                                              });
-                                                                                   },
-                                                    
+                                                                ], //end of Items list
+                                                                
+                                                                
+                                                            onTap: (index){
+                                                            //executes when user taps bottomNavigationBar
+                                                            //This method triggers the build() method to re-runwith the state passed into it. Changes the body of our scaffold widget & animates the navigation bar to the correct tab.
+                                                            //This is a method of the BottomNavigationBar.
+                                                            print('BottomNavigationBar Item was tapped.');
+                                                              
+                                                              setState((){
+                                                              _currentIndex = index;
+
+                                                                         });
+                                                             }, //end onTap(index),  
+
                                       ),
-                                                                  
-                                                                                                                                            
+                                   
+                                   
+                                   //rremoved list line that was causing the error from here........                                                                                                      
                                                                                                       
-                       ));
-                                                                                        
-      } //end of build method
+                      // )
+        ));
+
+
+                                                          
+                                                                            
+
+      }//end of build method
+
+//   onTap(int index) {
+// //executes when user taps bottomNavigationBar
+// //This method triggers the build() method to re-runwith the state passed into it. Changes the body of our scaffold widget & animates the navigation bar to the correct tab.
+// //This is a method of the BottomNavigationBar.
+          
+//            setState((){
+//           _currentIndex = index;
+
+//        });
+//   } //end onTap(index)
+
 } // end of class _MyMuseumAppState extends State
                                                                   
 void setState(Null Function() param0) {}
