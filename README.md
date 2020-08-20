@@ -11,9 +11,17 @@ These screenshots show how a user might take photos of and store details about a
 
 ![MyVirtualExhibitAppFirstScreenSketch](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/AppSideBySide.png) 
 
-
 I use MyVirtualMusesumApp to hold a Stateful Widget called an Painting. A painting represents a piece of Art. Many Paintings stored in a List are called an Exhibit (or, perhaps a PaintingManager?).
 MyVirtualMuseumApp holds a List of Exbits. It is the ExhibitManager.
+
+To do
+------------------------
+- Where can I apply Block pattern to control state? (Maybe need some other state patterns for other things, like the button). 
+- Draw a picture of all the different local and global states so I can see how state patterns might operate.
+- Make a new branch on Git so that I can revert back when I break this thing again.
+- Investigate yaml file to learn why 2nd image has never displayed.
+- Look at maps and tile widgets. Can I hold all the exhibit images in a map at the top level? This might make state simpler.
+- Start looking at how to access camera function.
 
 MyVirtualExhibitApp
 ------------------------
