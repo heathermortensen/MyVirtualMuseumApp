@@ -1,6 +1,20 @@
 import 'package:flutter/material.dart';
 
 enum RootTab { home, exhibits, add_exhibits }
+// enum ShapesIn2D {
+//  Circle,
+//  Square,
+//  Triangle;
+
+//  String getName(int count) {
+//    switch() {
+
+///   }
+//  }
+// }
+
+// ShapesIn2D.Circle
+// RootTab.home
 
 extension RootTabExt on RootTab {
   String get name {
@@ -45,15 +59,14 @@ class MyBottomNavigationBar extends StatelessWidget {
       fixedColor: Colors.green,
       iconSize: 30,
 
-      onTap: (index) => onTabSelected(RootTab.values[index]),
-      //currentIndex: _currentNavBarIndex,
-      ////////////////
-      ///Question: Should this pull from the navBar State or the MyMuseumApp state??
-      ///Right now, its pulling from MyMuseumApp, which is prob why it isnt working.
-      //currentIndex: _currentIndex, //Good when this was inside the MyMuseumApp class
+      //onTap property pushes the index into onTabSelected
+      onTap: (int index) {
+        onTabSelected(RootTab.values[index]);
+      },
+
       currentIndex: currentTab.index,
 
-      //Note: u must have 2 items here
+      //Map is used here so that data can change within a staeless widget.
       items: RootTab.values.map(_buildItem).toList(), //end of Items list
     );
   }
@@ -62,7 +75,7 @@ class MyBottomNavigationBar extends StatelessWidget {
     return BottomNavigationBarItem(
       title: Text(tab.name),
       icon: Icon(tab.icon),
-      backgroundColor: Colors.yellow,
+      //backgroundColor: Colors.yellow,
     );
   }
 }

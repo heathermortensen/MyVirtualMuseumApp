@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Exhibits extends StatelessWidget {
-  //final Color color;
+  //An exhibit will be a list of painting objects
+  //Each paining will have a photo of the paining and a photo or text input of the painting details card.
 
-  //Exhibits(this.color);
+  //List of paintings to display
+  //Photo asssociated with the museum/exhibit title with show details/location
 
   @override
   build(BuildContext context) {
@@ -12,7 +14,8 @@ class Exhibits extends StatelessWidget {
         title: new Text('Exhibits'),
       ),
       body: new Center(
-        child: new Text('Exhibits are displayed here'),
+        child: new Text(
+            'Exhibits are displayed here'), //Use some kinda listView widget
       ),
     );
   }
