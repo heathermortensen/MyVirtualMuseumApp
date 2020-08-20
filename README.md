@@ -42,3 +42,8 @@ In Flutter, it makes sense to keep the state above the widgets that use it. Sour
 
 ![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/ScreenShotSketchForMyApp.png)
 ![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/artToDO.png)
+
+Navigation Bar works - Exhibits Screen Displays - 1 of 2 Images display
+![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/HomeScreenAndExhibitScreen.png)
+
+
