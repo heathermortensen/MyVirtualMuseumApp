@@ -47,10 +47,12 @@ class _MyMuseumAppState extends State<MyMuseumApp> {
     setState(() {
       _currentTab = rootTab;
 
+      print('-----------------------------------------------------------');
       print('MyMuseumApp State: ');
       print('rootTab= $rootTab should return the following: ');
       print('_didSelectTab = $_didSelectTab should return the following: ');
       print('_currenttTab = $_currentTab');
+      print('///////////////////////////////////////////////////////////// ');
     });
   }
 

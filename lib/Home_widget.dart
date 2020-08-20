@@ -12,10 +12,10 @@ class HomeWidget extends StatelessWidget {
     return Column(
       children: <Widget>[
         Card(
-            // child: new Image(
-            //   image: AssetImage("assets/images/museumInterior.png"),
-            // ),
-            ),
+          child: Image.asset("images/museumInterior.png"),
+
+          // ),
+        ),
         Container(
           color: Colors.grey[900],
           width: double.infinity,
@@ -52,7 +52,7 @@ class HomeWidget extends StatelessWidget {
                       // });
                     }, //end onPressed() method
 
-                    //     child: Image.asset("assets/images/TMORA.png"),
+                    child: Image.asset("images/TMORA.png"),
                     color: Colors
                         .black, //This makes a frame around the exhibit button that looks like a picture frame. I like.
                   )), //Container
