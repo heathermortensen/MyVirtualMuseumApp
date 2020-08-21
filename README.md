@@ -1,22 +1,20 @@
 # MyVirtualMuseumApp
-MyVirtualMuseumApp helps a visitor photograph and document a museum exhibit so that other people can participate virtually. 
+MyVirtualMuseumApp helps a visitor photograph and document a museum exhibit so that others can participate virtually. 
 This project's purpose is to farmiliarize me with Flutter, its state patterns, and its various widgets and functionality.
 
-Artworks displayed in a gallery exhibit always have an informational plauque hanging next to them on the wall. It displays the artist name, title of the piece, date created, and medium. 
-Art works are conventially documented as pictured below, with a: 1.) Photo of the entire work; 2.) A close up photo of an area of interest (known as a Detail photo); 3.) A summary of information about the work (Title of the piece, artist name, medium, and date of creation); and 4.) A written description of the work prepared by the curator. These items are referred to in the code as Photo, Detail, Information, and Description. (See figure 1)
+Artworks displayed in a gallery exhibit always have an informational plauque. It displays artist name, title of the piece, date created, and medium. I call it 'Information' in the code.
 
-A database is not the most appropriate implementation to store art pieces within this app. A List that that changes size dynamically would provide flexibility for a user to take as many photos of an art piece as they wanted. However, since I want to familiarize myself with Flutter's database implementation methods, I might implement the following DB. The DB holds 4 photos to correspond with the art piece data pictured in figure 1.
+Artworks are conventially documented as pictured, with: 1.) A photo of the entire work; 2.) A close up of an area of interest (known as a Detail photo); 3.) A summary of information about the work (title of the piece, artist name, medium, and date of creation); and 4.) A written description of the work prepared by the curator. These items are referred to in the code as Photo, Detail, Information, and Description. (See figure 1)
 
-
-![AGuyFromTheUrals](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/AGuyFromTheUrals.png)
+![AGuyFromTheUrals](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/ManFromTheUrals.png)
 
 Figure 1. Conventional documentation of a piece of art
 
-
-Figure 2. Sketch of a database to hold paintings shown in an exhibit
+A database is not the most appropriate implementation to store art pieces within this app. A List that that changes size dynamically would provide flexibility for a user to take as many photos of an art piece as they wanted. However, since I want to familiarize myself with Flutter's database implementation methods, I might implement the following DB. The DB holds 4 photos to correspond with the art piece data pictured in figure 1.
 
 ![MyVirtualExhibitAppFirstScreenSketch](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/databaseImage2.png) 
 
+Figure 2. Sketch of a database to hold paintings shown in an exhibit
 
 To do
 ------------------------
