@@ -8,13 +8,13 @@ Artworks are conventially documented as pictured, with: 1.) A photo of the entir
 
 ![AGuyFromTheUrals](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/ManFromTheUrals.png)
 
-Figure 1. Conventional documentation of a piece of art
+**Figure 1.** Conventional documentation of a piece of art
 
 A database is not the most appropriate implementation to store art pieces within this app. A List that that changes size dynamically would provide flexibility for a user to take as many photos of an art piece as they wanted. However, since I want to familiarize myself with Flutter's database implementation methods, I might implement the following DB. The DB holds 4 photos to correspond with the art piece data pictured in figure 1.
 
 ![MyVirtualExhibitAppFirstScreenSketch](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/databaseImage2.png) 
 
-Figure 2. Sketch of a database to hold paintings shown in an exhibit
+**Figure 2.** Sketch of a database to hold paintings shown in an exhibit
 
 To do
 ------------------------
