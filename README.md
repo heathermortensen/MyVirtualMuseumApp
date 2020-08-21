@@ -6,7 +6,7 @@ Artworks displayed in a gallery exhibit always have an informational plauque. It
 
 Artworks are conventially documented as pictured, with: 1.) A photo of the entire work; 2.) A close up of an area of interest (known as a Detail photo); 3.) A summary of information about the work (title of the piece, artist name, medium, and date of creation); and 4.) A written description of the work prepared by the curator. These items are referred to in the code as Photo, Detail, Information, and Description. (See figure 1)
 
-![AGuyFromTheUrals](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/ManFromTheUrals.png)
+![AGuyFromTheUrals](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/AManFromTheUrals.png)
 
 **Figure 1.** Conventional documentation of a piece of art
 
