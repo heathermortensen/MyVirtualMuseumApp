@@ -1,27 +1,31 @@
 # MyVirtualMuseumApp
-MyVirtualMuseumApp holds a list of museum exhibits that I visited so that other people can participate in a virtual visit. 
+MyVirtualMuseumApp helps a visitor photograph and document a museum exhibit so that other people can participate virtually. 
+This project's purpose is to farmiliarize me with Flutter, its state patterns, and its various widgets and functionality.
 
-It allows a user to take photos of the artwork and store details about the title, artist name, date, medium, and description for later reference. This would be a helpful reference tool for museum volunteers when visitors inquired about specific pieces from shows that have come and gone (which they commonly do when they have seen a piece that they love and want more information about).
+Artworks displayed in a gallery exhibit always have an informational plauque hanging next to them on the wall. It displays the artist name, title of the piece, date created, and medium. 
+Art works are conventially documented as pictured below, with a: 1.) Photo of the entire work; 2.) A close up photo of an area of interest (known as a Detail photo); 3.) A summary of information about the work (Title of the piece, artist name, medium, and date of creation); and 4.) A written description of the work prepared by the curator. These items are referred to in the code as Photo, Detail, Information, and Description. (See figure 1)
 
-Artworks in gallery exhibits always have an informational plauque hanging next to them on the wall that contains descriptive information regarding medium, date, and artist. It looks like this:
+A database is not the most appropriate implementation to store art pieces within this app. A List that that changes size dynamically would provide flexibility for a user to take as many photos of an art piece as they wanted. However, since I want to familiarize myself with Flutter's database implementation methods, I might implement the following DB. The DB holds 4 photos to correspond with the art piece data pictured in figure 1.
 
-![BodyOfSovietArtExhibitPiece]()
 
-These screenshots show how a user might take photos of and store details about artwork in the gallery exhibit.
+![AGuyFromTheUrals](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/AGuyFromTheUrals.png)
 
-![MyVirtualExhibitAppFirstScreenSketch](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/AppSideBySide.png) 
+Figure 1. Conventional documentation of a piece of art
 
-I use MyVirtualMusesumApp to hold a Stateful Widget called an Painting. A painting represents a piece of Art. Many Paintings stored in a List are called an Exhibit (or, perhaps a PaintingManager?).
-MyVirtualMuseumApp holds a List of Exbits. It is the ExhibitManager.
+
+Figure 2. Sketch of a database to hold paintings shown in an exhibit
+
+![MyVirtualExhibitAppFirstScreenSketch](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/databaseImage2.png) 
+
 
 To do
 ------------------------
-- Where can I apply Block pattern to control state? (Maybe need some other state patterns for other things, like the button). 
-- Draw a picture of all the different local and global states so I can see how state patterns might operate.
-- Make a new branch on Git so that I can revert back when I break this thing again.
-- Investigate yaml file to learn why 2nd image has never displayed.
-- Look at maps and tile widgets. Can I hold all the exhibit images in a map at the top level? This might make state simpler.
-- Start looking at how to access camera function.
+- [  ] Where can I apply Block pattern to control state? (Maybe need some other state patterns for other things, like the button). 
+- [  ] Draw a picture of all the different local and global states so I can see how state patterns might operate in unison.
+- [  ] Make a new branch on Git so that I can revert back when I break this thing again.
+- [  ] Investigate yaml file to learn why 2nd image has never displayed.
+- [  ] Look at maps and tile widgets. Can I hold all the exhibit images in a map at the top level? This might make state simpler.
+- [  ] Start looking at how to access camera function.
 
 MyVirtualExhibitApp
 ------------------------
@@ -51,7 +55,7 @@ In Flutter, it makes sense to keep the state above the widgets that use it. Sour
 ![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/ScreenShotSketchForMyApp.png)
 ![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/artToDO.png)
 
-Navigation Bar works - Exhibits Screen Displays - 1 of 2 Images display
-![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/HomeScreenAndExhibitScreen.png)
+Navigation Bar works - Three Screens
+![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/NavBarScreenshot.png)
 
 
