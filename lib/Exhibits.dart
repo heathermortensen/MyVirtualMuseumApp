@@ -10,13 +10,16 @@ class Exhibits extends StatelessWidget {
   @override
   build(BuildContext context) {
     return new Scaffold(
-      backgroundColor: Colors.yellow[200],
+      backgroundColor: Colors.yellow[100],
       appBar: new AppBar(
         title: new Text('Exhibits'),
       ),
       body: new Center(
-        child: new Text(
-            'Exhibits are displayed here'), //Use some kinda listView widget
+        child: new Text('Exhibits are displayed here',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            )),
       ),
     );
   }

@@ -56,7 +56,7 @@ class MyBottomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      fixedColor: Colors.green,
+      fixedColor: Colors.black,
       iconSize: 30,
 
       //onTap property pushes the index into onTabSelected

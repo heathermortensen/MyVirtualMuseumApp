@@ -59,8 +59,8 @@ class HomeWidget extends StatelessWidget {
                     }, //end onPressed() method
 
                     child: Image.asset("images/TMORA.png"),
-                    color: Colors
-                        .brown, //This makes a frame around the exhibit button that looks like a picture frame. I like.
+                    color: Colors.brown[
+                        300], //This makes a frame around the exhibit button that looks like a picture frame. I like.
                   )), //Container
             ], //children of Row
           ),

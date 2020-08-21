@@ -11,12 +11,16 @@ class add_exhibits extends StatelessWidget {
   @override
   build(BuildContext context) {
     return new Scaffold(
-      backgroundColor: Color(0xff84FFFF),
+      backgroundColor: Colors.lightGreen[200],
       appBar: new AppBar(
         title: new Text('Add a new exhibit'),
       ),
       body: new Center(
-        child: new Text('Textfields here'), //Use some kinda listView widget
+        child: new Text('Textfields here for user input',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            )),
       ),
     );
   }
