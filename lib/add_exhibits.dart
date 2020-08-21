@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Exhibits extends StatelessWidget {
+// ignore: camel_case_types
+class add_exhibits extends StatelessWidget {
   //An exhibit will be a list of painting objects
   //Each paining will have a photo of the paining and a photo or text input of the painting details card.
 
@@ -10,13 +11,12 @@ class Exhibits extends StatelessWidget {
   @override
   build(BuildContext context) {
     return new Scaffold(
-      backgroundColor: Colors.yellow[200],
+      backgroundColor: Color(0xff84FFFF),
       appBar: new AppBar(
-        title: new Text('Exhibits'),
+        title: new Text('Add a new exhibit'),
       ),
       body: new Center(
-        child: new Text(
-            'Exhibits are displayed here'), //Use some kinda listView widget
+        child: new Text('Textfields here'), //Use some kinda listView widget
       ),
     );
   }

@@ -50,11 +50,17 @@ class HomeWidget extends StatelessWidget {
                       //   //display the Exhibits page, initialized to hold one Exhibit with 3 paintings in it.
                       //   print('Print() inside Home_widget.dart: _curentTab should be set to equal 1.');
                       // });
+                      print(
+                          '===================================================');
+                      print(
+                          'Button clicked to display a default museum exhibit.');
+                      print(
+                          '===================================================');
                     }, //end onPressed() method
 
                     child: Image.asset("images/TMORA.png"),
                     color: Colors
-                        .black, //This makes a frame around the exhibit button that looks like a picture frame. I like.
+                        .brown, //This makes a frame around the exhibit button that looks like a picture frame. I like.
                   )), //Container
             ], //children of Row
           ),
