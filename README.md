@@ -41,13 +41,11 @@ Push state up to the top of the widget tree. Then, it can be passed down through
 
 * A user can photograph each painting's information from the plague hanging next to it on the gallery wall, or they can input that information into a textbox as pictured in image 3.
 
-![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/artShowApp7.png)
 
 
-## Implementation
+## Currently Implementated
 
 ![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/ScreenShotSketchForMyApp.png)
-
 
 ### Navigation Bar leads to 3 screens
 
@@ -55,7 +53,12 @@ Push state up to the top of the widget tree. Then, it can be passed down through
 
 ![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/NavBarScreenshot.png)
 
-* Yet to implement ....
+## Yet to Implement
 
 ![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/NavBarScreenshot2.png)
+
+
+![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/artshowapp7.png)
+
+### Links to help
 
