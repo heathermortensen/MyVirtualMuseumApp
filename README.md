@@ -21,31 +21,16 @@ A database is not the most appropriate implementation to store art pieces within
 
 To do
 ------------------------
-- [  ] Where can I apply Block pattern to control state? (Maybe need some other state patterns for other things, like the button). 
-- [  ] Draw a picture of all the different local and global states so I can see how state patterns might operate in unison.
-- [  ] Make a new branch on Git so that I can revert back when I break this thing again.
-- [  ] Investigate yaml file to learn why 2nd image has never displayed. Post question on Stack overflow.
-- [  ] Look at maps and tile widgets. Can I hold all the exhibit images in a map at the top level? This might make state simpler.
-- [  ] Start looking at how to access camera function.
+- [ ] Where can I apply Block pattern to control state? (Maybe need some other state patterns for other things, like the button). 
+- [ ] Draw a picture of all the different local and global states so I can see how state patterns might operate in unison.
+- [ ] Make a new branch on Git so that I can revert back when I break this thing again.
+- [ ] Investigate yaml file to learn why 2nd image has never displayed. Post question on Stack overflow.
+- [ ] Look at maps and tile widgets. Can I hold all the exhibit images in a map at the top level? This might make state simpler.
+- [ ] Start looking at how to access camera function.
 
 - [ ] Implement the following:
-![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/artToDO.png)
-
-State
-------------------------
-
-* In Flutter, it makes sense to keep the state above the widgets that use it. Source: Stateful Widgets: https://flutter.dev/docs/development/data-and-backend/state-mgmt/simple
-Push state up to the top of the widget tree. Then, it can be passed down through constructors.
-
-* The app holds a list of exhibits. Each exhibits holds an unlimited number of pieces of artwork, alongside their detailed information.
-
-* A user can photograph each painting's information from the plague hanging next to it on the gallery wall, or they can input that information into a textbox as pictured in image 3.
-
-
 
 ## Currently Implementated
-
-![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/ScreenShotSketchForMyApp.png)
 
 ### Navigation Bar leads to 3 screens
 
@@ -57,8 +42,25 @@ Push state up to the top of the widget tree. Then, it can be passed down through
 
 ![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/NavBarScreenshot2.png)
 
+- [ ] TMORA Link
+- [ ] Exhibit display page
+- [ ] Painting display page
+
+- [ ] List of Exhibits page
+- [ ] Add new exhibit page
+
 
 ![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/artshowapp7.png)
 
-### Links to help
 
+State stuff comes next
+------------------------
+
+* In Flutter, it makes sense to keep the state above the widgets that use it. Source: Stateful Widgets: https://flutter.dev/docs/development/data-and-backend/state-mgmt/simple
+Push state up to the top of the widget tree. Then, it can be passed down through constructors.
+
+* The app holds a list of exhibits. Each exhibits holds an unlimited number of pieces of artwork, alongside their detailed information.
+
+* A user can photograph each painting's information from the plague hanging next to it on the gallery wall, or they can input that information into a textbox as pictured in image 3.
+
+### Links to help
