@@ -48,7 +48,7 @@ flutter:
   assets:
      - images/
      - images/museumInterior.png
-     #- images/TMORA.png
+#     - images/TMORA.png
     #- images/TMORA.png
   #   - images/a_dot_ham.jpeg
 
