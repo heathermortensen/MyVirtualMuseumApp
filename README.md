@@ -42,7 +42,7 @@ To Do
 Picture HERE
 
 - [ ] Make a new branch on Git so that I can revert back when I break this thing again.
-- [ ] Investigate yaml file to learn why 2nd image has never displayed. Post question on [Stack overflow](https://stackoverflow.com/questions/63549695/first-flutter-image-asset-displays-museum-photo-why-is-the-second-image-muse).
+- [ ] Investigate yaml file to learn why 2nd image has never displayed. Posted question on [Stack overflow](https://stackoverflow.com/questions/63549695/first-flutter-image-asset-displays-museum-photo-why-is-the-second-image-muse). 
 
 - [ ] Look at maps and tile widgets. Can I hold all the exhibit images in a map at the top level? This might make state simpler.
 - [ ] Start looking at how to access camera function.
