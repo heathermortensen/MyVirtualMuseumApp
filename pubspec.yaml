@@ -47,7 +47,24 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
      - images/
-     - images/museumInterior.png
+    # - images/museumInterior.png
+    # SO Suggestion #1a.
+    #---------------------
+    # - assets/images/
+    # - assets/images/museumInterior.png
+    # - assets/images/TMORA.png
+    # SO Suggestion #1b.
+    #---------------------
+    # - assets/images/
+    # - images/museumInterior.png
+    # - images/TMORA.png
+    # SO Suggestion #1c.
+    #-----------------------
+    # - assets/images/
+    # - museumInterior.png
+    # - TMORA.png
+     
+
      #- images/TMORA.png
     #- images/TMORA.png
   #   - images/a_dot_ham.jpeg
