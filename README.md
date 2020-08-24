@@ -42,7 +42,7 @@ To Do
 Picture HERE
 
 - [ ] Make a new branch on Git so that I can revert back when I break this thing again.
-- [ ] Investigate yaml file to learn why 2nd image has never displayed. Posted question on [Stack overflow](https://stackoverflow.com/questions/63549695/first-flutter-image-asset-displays-museum-photo-why-is-the-second-image-muse). 
+- [x] Investigate yaml file to learn why 2nd image has never displayed. Posted question on [Stack overflow](https://stackoverflow.com/questions/63549695/first-flutter-image-asset-displays-museum-photo-why-is-the-second-image-muse). Image displays.
 
 - [ ] Look at maps and tile widgets. Can I hold all the exhibit images in a map at the top level? This might make state simpler.
 - [ ] Start looking at how to access camera function.
@@ -55,6 +55,10 @@ Picture HERE
 * The bottomNavigationBar has 3 buttons - Home, Exhibits, and Add an Exhibit.
 
 ![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/NavBarScreenshot.png)
+
+* Both images display on the screen.
+
+![Screenshot](https://raw.githubusercontent.com/heathermortensen/MyVirtualMuseumApp/master/images/workingHomePageImage.png)
 
 **Figure 3.** Current implemetaion of the museum app
 
